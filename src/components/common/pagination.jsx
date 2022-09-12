@@ -1,5 +1,6 @@
 import React from "react";
 import _ from "lodash"; // _ is convention for lodash
+import PropTypes from "prop-types";
 
 // input: number of movies and size of each page
 // output: event when new page is clicked
@@ -31,6 +32,14 @@ const Pagination = (props) => {
       </nav>
     </React.Fragment>
   );
+};
+
+// uses prop type library to require certain type for props. Warns on console if error if wrong type or missing required
+Pagination.propTypes = {
+  itemCount: PropTypes.number.isRequired,
+  pageSize: PropTypes.number.isRequired,
+  currentPage: PropTypes.number.isRequired,
+  onPageChange: PropTypes.func.isRequired,
 };
 
 export default Pagination;
