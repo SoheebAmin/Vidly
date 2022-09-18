@@ -3,15 +3,13 @@ import React from "react";
 //input: Genres
 //Output: Event to remove all movies not from the given genre.
 
-const ListGroup = (props) => {
-  const {
-    items,
-    textProperty,
-    valueProperty,
-    selectedItem,
-    onItemSelect,
-  } = props;
-
+const ListGroup = ({
+  items,
+  textProperty,
+  valueProperty,
+  selectedItem,
+  onItemSelect,
+}) => {
   return (
     <ul className="list-group">
       {items.map((item) => (
